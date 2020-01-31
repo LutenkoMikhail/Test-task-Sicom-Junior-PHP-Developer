@@ -45,7 +45,7 @@ and out to sea as the rain clouds break overhead.';
 
 
 echo "Text sample:{$textSamples}".PHP_EOL;
-echo "An array with unique words found:<br>";
+echo "An array with unique words found: ".PHP_EOL;
 foreach (getWords($textSamples) as $key => $value) {
     echo "Word: {$key} Count:{$value} ".PHP_EOL;
 }

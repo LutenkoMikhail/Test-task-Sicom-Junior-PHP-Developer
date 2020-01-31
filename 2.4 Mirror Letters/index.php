@@ -16,29 +16,14 @@ echo "<h3>2.4 Mirror Letters </h3>";
  */
 function mirrorLitters(string $basicString): string
 {
-    $resultString = '';
-    foreach (str_split(strtoupper($basicString)) as $value) {
-        if (ord($value) <= 76 && ord($value) >= 65) {
-            $resultString = $resultString . chr(90 - (ord($value) - 65));
-        }
-        if (ord($value) >= 78 && ord($value) <= 90) {
-            $resultString = $resultString . chr(65 + (90 - ord($value)));
-        }
-        if ((ord($value) === 77)) {
-            $resultString = $resultString . $value;
-        }
-    }
-    return $resultString;
+    return strtr(strtoupper($basicString), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'ZYXWVUTSRQPONMLKJIHGFEDCBA');
 }
 
-$basicString = 'ABCMXYZ';
-echo 'Source string:' . $basicString . "<br>";
-echo 'Mirror string:' . mirrorLitters($basicString);
+$basicString = 'AAAA; 2222:)))) BCDEFGH---IJKLM=NOPQRSTUVW777XYZaaaaaaBBB';
+echo 'Source string : ' . $basicString . PHP_EOL;
+echo 'Mirror string : ' . mirrorLitters($basicString);
 
-
-
-
-
-
-
+/* T.E comment:
+ * 1.1 If I try to write strings to basic string, it didn't working correctly.
+ */
 

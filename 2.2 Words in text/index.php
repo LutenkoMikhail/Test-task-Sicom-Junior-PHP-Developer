@@ -44,10 +44,10 @@ father weep in another room. The paper boat continues through the sewers to the 
 and out to sea as the rain clouds break overhead.';
 
 
-echo "Text sample:<br> {$textSamples}<br>";
+echo "Text sample:{$textSamples}".PHP_EOL;
 echo "An array with unique words found:<br>";
 foreach (getWords($textSamples) as $key => $value) {
-    echo "<strong> Word:</strong>{$key} <strong> Count:{$value} </strong> <br>";
+    echo "Word: {$key} Count:{$value} ".PHP_EOL;
 }
 
 

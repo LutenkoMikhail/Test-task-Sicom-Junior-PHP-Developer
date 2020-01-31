@@ -14,18 +14,25 @@ echo "<h3>2.1 Reverse string. </h3>";
  * @param string $basicString
  * @return string
  */
-function reverseString(string $basicString):string
+function reverseString(string $basicString): string
 {
     $returnString = '';
-    for ($iteratorString = strlen($basicString)-1; $iteratorString >= 0; $iteratorString--) {
+    for ($iteratorString = strlen($basicString) - 1; $iteratorString >= 0; $iteratorString--) {
         $returnString .= $basicString[$iteratorString];
     }
     return $returnString;
 }
-$basicString = 'Write with PHP a function with functional like strrev().';
-echo "Start line:{$basicString}<br>";
-echo 'Inverted line:'.reverseString($basicString);
 
+$basicString = 'Write with PHP a function with functional like strrev().';
+echo "Start line:{$basicString}" . PHP_EOL;
+echo 'Inverted line:' . reverseString($basicString);
+
+/* T.E commnets:
+ * Just tip:
+ * Very good implementation of this task. But it looks badly readable,
+ * if you run it in the console instead of the browser,
+ * next time try to use predefined constants PHP_EOL instead of html tag <br/>
+ */
 
 
 

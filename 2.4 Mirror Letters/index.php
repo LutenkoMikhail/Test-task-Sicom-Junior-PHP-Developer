@@ -16,7 +16,10 @@ echo "<h3>2.4 Mirror Letters </h3>";
  */
 function mirrorLitters(string $basicString): string
 {
-    return strtr(strtoupper($basicString), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'ZYXWVUTSRQPONMLKJIHGFEDCBA');
+
+    return strtr($basicString,
+        'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz',
+        'ZYXWVUTSRQPONMLKJIHGFEDCBAzyxwvutsrqponmlkjihgfedcba');
 }
 
 $basicString = 'AAAA; 2222:)))) BCDEFGH---IJKLM=NOPQRSTUVW777XYZaaaaaaBBB';

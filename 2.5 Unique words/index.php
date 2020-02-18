@@ -17,7 +17,7 @@ echo "<h3>2.5 Unique words .</h3>";
  */
 function getUniqueWords(string $text): array
 {
-    preg_match_all('/([a-zA-Z]+)/', strtolower($text), $resultArray);
+    preg_match_all('/([a-zA-Z\'-_]+)/', strtolower($text), $resultArray);
     return array_keys(array_count_values($resultArray [0]), 1);
 }
 
